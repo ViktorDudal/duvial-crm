@@ -1,4 +1,4 @@
-package com.gmail.viktordudal.crm.ui;
+package com.gmail.viktordudal.crm.ui.view.list;
 
 import com.gmail.viktordudal.crm.backend.entity.Company;
 import com.gmail.viktordudal.crm.backend.entity.Contact;

@@ -1,22 +1,23 @@
-package com.gmail.viktordudal.crm.ui;
+package com.gmail.viktordudal.crm.ui.view.list;
 
 import com.gmail.viktordudal.crm.backend.entity.Company;
 import com.gmail.viktordudal.crm.backend.entity.Contact;
 import com.gmail.viktordudal.crm.backend.service.CompanyService;
 import com.gmail.viktordudal.crm.backend.service.ContactService;
+import com.gmail.viktordudal.crm.ui.MainLayout;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@Route
-@CssImport("./styles/shared-styles.css")
-public class MainView extends VerticalLayout {
+@Route(value="", layout = MainLayout.class)
+@PageTitle("Contacts | Viktor CRM")
+public class ListView extends VerticalLayout {
 
     private ContactService contactService;
 
@@ -24,7 +25,7 @@ public class MainView extends VerticalLayout {
     private TextField filterText = new TextField();
     private ContactForm form;
 
-    public MainView(ContactService contactService, CompanyService companyService) {
+    public ListView(ContactService contactService, CompanyService companyService) {
         this.contactService = contactService;
         addClassName("list-view");
         setSizeFull();
