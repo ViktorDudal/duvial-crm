@@ -12,8 +12,10 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.HighlightConditions;
 import com.vaadin.flow.router.RouterLink;
+import com.vaadin.flow.server.PWA;
 
 @CssImport("./styles/shared-styles.css")
+@PWA(name = "VaadinCRM", shortName = "CRM", offlineResources = {"./styles/offline.css", "./images/offline.png"})
 public class MainLayout extends AppLayout {
 
     public MainLayout() {
